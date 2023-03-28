@@ -68,6 +68,8 @@ function greeting(name) {
 
 greeting('Justin')
 
+
+
 ////////////////// PROBLEM 5 ////////////////////
 
 /*
@@ -106,6 +108,13 @@ console.log(compareNums(2, 2))
 
 //CODE HERE
 
+function add(num1, num2) {
+  num1 = parseInt(num1)
+  num2 = parseInt(num2)
+  return num1 + num2
+}
+ let sum = add('3', '4')
+console.log(sum)
 
 
 
@@ -122,7 +131,7 @@ const exclaim = function(str) {
 
 // console.log('arrow')
 // console.log('declaration')
-// console.log('expression')
+ console.log('expression')
 
 
 
@@ -137,7 +146,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-// console.log('arrow')
+ console.log('arrow')
 // console.log('declaration')
 // console.log('expression')
 
@@ -148,6 +157,8 @@ const exclaimTwo = str => {
   Brownie points if you use a template string
 */
 
+const exclaimThree = str => str.toUpperCase() + '!!!'
+console.log(exclaimThree('hi'))
 
 
 ////////////////// PROBLEM 9 ////////////////////
@@ -162,7 +173,7 @@ function exclaimFour(str) {
 }
 
 // console.log('arrow')
-// console.log('declaration')
+ console.log('declaration')
 // console.log('expression')
 
 
@@ -177,6 +188,14 @@ function exclaimFour(str) {
 
 //CODE HERE
 
+function nameCheck(name) {
+  if (name === 'Steven') return ('What is up Steven?')
+  else if (name === 'Bryan') return ('Hey Bryan!')
+  else return ('Cool Name, ' + `${name}`)
+}
+
+let nameGreeting = nameCheck('Sophia')
+console.log(nameGreeting)
 
 ////////////////// PROBLEM 11 ////////////////////
 /*
@@ -190,6 +209,15 @@ function exclaimFour(str) {
 
 //CODE HERE
 
+let faveColorFinder = (color) => {
+  if (color === 'red') return ('red is a great color')
+  else if (color === 'green') return ('green is a solid favorite color')
+  else if (color === 'black') return ('so trendy')
+  else return 'you need to evaluate your favorite color choice'
+}
+
+let colorRating = faveColorFinder('black')
+console.log(colorRating)
 
 ////////////////// PROBLEM 12 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
@@ -201,6 +229,12 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 
 //CODE HERE
 
+let printAllNames = function(arrayOfNames) {
+  for (let i = 0; i < arrayOfNames.length; i++)
+  console.log(arrayOfNames[i])
+}
+
+printAllNames(namesArr)
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
@@ -212,6 +246,13 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 
 //CODE HERE
 
+let thatsOdd = (number) => {
+  if (number%2 === 0) return "That's not odd!" 
+  else return 'That is odd indeed!'
+}
+
+let oddChecker = thatsOdd(1)
+console.log(oddChecker)
 
 ////////////////// PROBLEM 14 ////////////////////
 
@@ -225,6 +266,9 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 
 //CODE HERE
 
+let bestMovie = movieTitle => `${movieTitle}`+ ' is the best movie ever!'
+
+console.log(bestMovie('White Chicks'))
 
 ////////////////// PROBLEM 15 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
@@ -239,6 +283,22 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 
 //CODE HERE
 
+let bigOrSmall = function(arr) {
+  let answers = []
+  for (let i=0; i < arr.length; i++) {
+    if (arr[i] > 100) {
+     answers.push('big')
+    }  
+    else {
+      answers.push('small')
+    }
+  }
+  return answers
+  //let arrayEvaluator = answers.slice(0,8)
+}
+
+let arrayEvaluator = bigOrSmall(bigOrSmallArray)
+console.log(arrayEvaluator)
 
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
@@ -250,6 +310,18 @@ let loser = 'Glimmer'
 
 //CODE HERE
 
+let theEliminator = function(array, string) {
+  for (let i=0; i < array.length; i++) {
+    if (array[i] === string) {
+      array.splice(i,1)
+    }
+
+  }
+  return array
+}
+
+console.log(theEliminator(contestants, loser))
+
 
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo."
@@ -260,6 +332,11 @@ let sampleString = "Hi, my name is Kylo."
 
 //CODE HERE
 
+let string = function(sample) {
+  console.log(sample.toUpperCase())
+}
+
+string(sampleString)
 
 ////////////////// PROBLEM 18 ////////////////////
 /*
