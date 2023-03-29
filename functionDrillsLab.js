@@ -349,6 +349,19 @@ string(sampleString)
   return 'must provide a valid email address'
 */
 
+//let email = '2'
+
+let emailCheck = emailParameter => {
+  emailParameter = String(emailParameter)
+  emailParameter = emailParameter.trim()
+  if (emailParameter.includes('@') === true)
+    return 'email verified'
+    else return 'must provide a valid email address'
+
+}
+
+console.log(emailCheck('sophiakela@gmail.com'))
+
 ////////////////// PROBLEM 19 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
@@ -357,6 +370,15 @@ string(sampleString)
 
 //CODE HERE
 
+function chocolateFrogBuyer(goldSpend) {
+  if (goldSpend >= 3);
+  let chocolateFrogPurchased = Math.floor(goldSpend/3)
+  return chocolateFrogPurchased
+
+}
+
+let totalFrogs = chocolateFrogBuyer(23)
+console.log(totalFrogs)
 
 ////////////////// PROBLEM 20 ////////////////////
 /*
@@ -364,6 +386,8 @@ string(sampleString)
 */
 
 //CODE HERE
+
+//no bug in previous problem
 
 
 ////////////////// PROBLEM 21 ////////////////////
@@ -374,6 +398,17 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 
 //CODE HERE
 
+// function arrayOfNumbers(numberArray) {
+//   for (let i=0; i<numberArray.length; i++) {
+//     for (let j=1; i<numberArray.length; i++) {
+//         if (numberArray[j] === numberArray[i]+1)
+//         console.log('true')
+//         else console.log('false')
+//     }
+//   }
+// }
+
+// let arrayIsAscending = arrayOfNumbers(sampleArray)
 
 ////////////////// PROBLEM 22 ////////////////////
 
@@ -395,6 +430,9 @@ function pond() {
   All within different scopes.
   Given the functions and variables above, edit the arrays below to contain only the appropriate variable names (as strings).
 */
+
+
+
 
 //This array should contain the variable names (as strings) accessible in the global scope.
 let globalScope = []
