@@ -436,6 +436,8 @@ function pond() {
 
 //This array should contain the variable names (as strings) accessible in the global scope.
 let globalScope = []
+globalScope.push(duck)
+console.log(globalScope)
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
 let bathroomScope = []
